@@ -13,7 +13,7 @@ def sendEmail():
     server.starttls()
     # For security reasons,  putting the SMTP connection in the TLS mode. TLS (Transport Layer Security) encrypts all
     # the SMTP commands our e-mail id and password
-    server.login('rkt574154@gmail.com', 'ydgxsufkukluayef')
+    server.login('')
     # email id of receiver
     Speak("Type the receiver email id")
     receiver = input("Enter the email-id of the receiver-:")
@@ -28,7 +28,7 @@ def sendEmail():
         Speak("Type the message")
         content = input("Enter message : ")
     # sending the message
-    server.sendmail("rkt574154@gmail.com", receiver, "Subject :{} \n\n {}".format(subject, content))
+    server.sendmail("", receiver, "Subject :{} \n\n {}".format(subject, content))
     # closing the connection
     server.close()
     Speak("email sent successfully")
